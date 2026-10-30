@@ -30,7 +30,7 @@ def test_tarefas_post():
 
 def test_tarefa_criada():
     resposta = CLIENT.get("/tarefas/0")
-    assert resposta.status_code == 201
+    assert resposta.status_code == 200
     assert resposta.json() == {
         "id": 0,
         "titulo": "teste",
