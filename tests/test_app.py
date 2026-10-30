@@ -12,6 +12,11 @@ def test_index():
     assert resposta.json() == {"mensagem": "Olá, mundo!"}
 
 # 1. Implementar um teste unitário para a rota /tarefas (GET)
+def test_autor():                                         
+    resposta = CLIENT.get("/autor")
+    assert resposta.status_code == 200
+    assert resposta.json() == {"mensagem": "Alan Silva"}
+
 def test_tarefas_get():
     resposta = CLIENT.get("/tarefas")
     assert resposta.status_code == 200
