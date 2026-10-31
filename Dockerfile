@@ -5,10 +5,10 @@ RUN mkdir /app
 WORKDIR /app
 
 #    Host  ->  Contêiner
-COPY app/ ./
+COPY app/ ./app/
 COPY requirements.txt ./requirements.txt
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-CMD ["fastapi", "run"]
+CMD ["fastapi", "run", "app/api.py"]
