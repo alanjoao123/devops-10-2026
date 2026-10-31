@@ -36,7 +36,7 @@ jobs:
         DATABASE_ADDRESS: mock 
         DATABASE: mock
       run: |
-        pytest --rootdir app
+        python -m pytest -v
   entrega:
     needs: build
     runs-on: ubuntu-latest
