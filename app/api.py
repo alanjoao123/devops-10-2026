@@ -69,7 +69,6 @@ async def tarefas(sessao: SESSAO) -> List[Tarefa]:
 @APP.post("/tarefas", status_code=201)
 async def post_tarefa(sessao: SESSAO, titulo: str, descricao: str = None):
     """Rota para criar uma tarefa."""
-    data = datetime.now().astimezone(timezone.utc).replace(microsecond=0)
     tarefa_nova = Tarefa(
         titulo=titulo,
         descricao=descricao,
