@@ -32,7 +32,7 @@ if DATABASE is None:
     sys.exit(1)
 
 ENGINE = create_engine(
-    f"mysql+pymysql://{DATABASE_USERNAME}:{DATABASE_PASSWORD}@{DATABASE_ADDRESS}:3306/{DATABASE}"
+    f"postgresql+psycopg://{DATABASE_USERNAME}:{DATABASE_PASSWORD}@{DATABASE_ADDRESS}/{DATABASE}"
 )
 
 
@@ -153,7 +153,7 @@ async def index():
 @APP.get("/autor")
 async def autor():
     """Rota para retornar o autor da aplicação"""
-    return {"mensagem": "Pedro Rocha Horchulhack"}
+    return {"mensagem": "Alan Silva"}
 
 
 # 2. Criar um teste unitário para verificar se a rota

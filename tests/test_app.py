@@ -114,4 +114,4 @@ def test_autor(cliente: TestClient):
     resposta = cliente.get("/autor")
 
     assert resposta.status_code == 200
-    assert resposta.json() == {"mensagem": "Pedro Rocha Horchulhack"}
+    assert resposta.json() == {"mensagem": "Alan Silva"}
